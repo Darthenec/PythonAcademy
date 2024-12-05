@@ -78,7 +78,18 @@ pocet_cisel = 0
 suma_cisel = 0
 # Získání délek slov
 delky_slov = [len(slovo.strip(",.?!")) for slovo in slova]
-# Spočítáme četnosti jednotlivých délek slov
+
+"""
+ # Ruční počítání četností délek pomocí slovníku
+cetnosti = {}
+for delka in delky_slov:
+    if delka in cetnosti:
+        cetnosti[delka] += 1
+    else:
+        cetnosti[delka] = 1
+
+"""
+# dosazení jednoduší metody importováním counteru
 delky_count = Counter(delky_slov)
 
 
